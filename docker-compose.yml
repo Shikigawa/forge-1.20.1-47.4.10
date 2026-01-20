@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - "25565:25565"
+      - "25575:25575"
     env_file:
         - .env
     volumes:
@@ -13,3 +14,4 @@ services:
       - ./mods:/mods
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
+
