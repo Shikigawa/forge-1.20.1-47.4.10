@@ -11,3 +11,5 @@ services:
     volumes:
       - ./data:/data
       - ./mods:/mods
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
