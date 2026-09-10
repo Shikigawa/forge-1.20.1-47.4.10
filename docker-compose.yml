@@ -14,4 +14,12 @@ services:
       - ./mods:/mods
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
+    deploy:
+      resources:
+        limits:
+          memory: 16G
+          cpus: '6' # Выделяем 6 потоков из ваших 24-х
+        reservations:
+          memory: 10G
+          cpus: '4' # Гарантированный минимум
 
